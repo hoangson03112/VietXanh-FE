@@ -31,13 +31,13 @@ export default function Header() {
             <Link href="/product" className="cursor-pointer font-normal">
               Sản Phẩm
             </Link>
-            <Link href="#" className="cursor-pointer font-normal">
+            <Link href="/aboutus" className="cursor-pointer font-normal">
               Về Chúng Tôi
             </Link>
-            <Link href="#" className="cursor-pointer font-normal">
+            <Link href="/news" className="cursor-pointer font-normal">
               Bài Viết
             </Link>
-            <Link href="#" className="cursor-pointer font-normal">
+            <Link href="/contact" className="cursor-pointer font-normal">
               Liên Hệ
             </Link>
           </nav>

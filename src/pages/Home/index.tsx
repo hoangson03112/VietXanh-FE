@@ -1,6 +1,6 @@
 import React from "react";
-import CategoryCard from "@/src/components/share/ProductCard";
-import { categories } from "@/src/data/product";
+import ProductCard from "@/src/components/share/ProductCard";
+import { products } from "@/src/data/product";
 import FeatureSection from "./components/FeatureSection";
 import WhyChooseSection from "./components/WhyChooseSection";
 import OrderStepsSection from "./components/OrderStepsSection";
@@ -15,14 +15,15 @@ function HomeView() {
         Với Việt Xanh, bạn hoàn toàn yên tâm lựa chọn vì mỗi sản phẩm đều thân
         thiện với môi trường và an toàn cho cuộc sống.
       </p>
-      <div className="flex gap-6 mt-8">
-        {categories.slice(0,4).map((cat) => (
-          <CategoryCard
-            key={cat.id}
-            image={cat.image}
-            title={cat.title}
-            description={cat.description}
-            link={cat.link}
+      <div className="flex justify-between mt-8 ">
+        {products.slice(0,4).map((pro) => (
+          <ProductCard
+            key={pro.id}
+            id={pro.id}
+            image={pro.image}
+            title={pro.title}
+            description={pro.shortDescription}
+
           />
         ))}
       </div>
