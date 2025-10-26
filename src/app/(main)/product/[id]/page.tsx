@@ -61,12 +61,10 @@ export default function ProductDetailPage() {
           <div className="flex-1 flex flex-col items-center">
             {/* Ảnh chính */}
             <div className="w-full aspect-square bg-gray-300 flex items-center justify-center rounded-sm">
-              <Image
+              <img
                 src={selectedImage || product.images[0]}
                 alt={product.title}
-                width={641}
-                height={650}
-                className="object-contain"
+                className="object-cover w-full h-full"
               />
             </div>
 
@@ -99,12 +97,10 @@ export default function ProductDetailPage() {
                         : "border-transparent"
                     } bg-gray-300 flex items-center justify-center`}
                   >
-                    <Image
+                    <img
                       src={img}
                       alt={`${product.title}-${idx}`}
-                      width={100}
-                      height={100}
-                      className="object-cover"
+                      className="object-cover w-full h-full"
                     />
                   </div>
                 ))}

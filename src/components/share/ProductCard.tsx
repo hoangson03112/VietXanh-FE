@@ -10,33 +10,40 @@ interface CategoryCardProps {
   description: string;
 }
 
-const CategoryCard: React.FC<CategoryCardProps> = ({ id, image, title, description }) => {
+const CategoryCard: React.FC<CategoryCardProps> = ({
+  id,
+  image,
+  title,
+  description,
+}) => {
   return (
-    <div className="relative">
-      {/* Link tới trang chi tiết sản phẩm */}
+    <div className="relative w-full max-w-[295px] mx-auto">
       <Link
         href={`/product/${id}`}
-        className=" bg-[#cacaca] w-[295px] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-[350px]"
+        className="bg-[#cacaca] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-[370px]"
       >
-        {/* Ảnh sản phẩm */}
         <img
           src={image}
           alt={title}
-          className="w-full h-[210px] rounded-t-xl object-cover"
+          className="w-full h-[210px]  rounded-t-xl"
         />
 
-        {/* Nội dung */}
-        <div className="relative z-10 px-6 flex flex-col py-4 justify-between">
-          <h3 className="text-[20px] font-semibold text-[#333333]">{title}</h3>
-          <p className="text-[#777777] text-[14px] mt-1">{description}</p>
-        </div>
-      </Link>
+        <div className="px-6 py-4 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 className="text-[20px] font-semibold text-[#333333] line-clamp-2">
+              {title}
+            </h3>
+            <p className="text-[#777777] text-[14px] mt-2 line-clamp-3">
+               {description.length > 58 ? description.slice(0, 58) + "..." : description}
+            </p>
+          </div>
 
-      <Link
-        href="/product"
-        className="absolute bottom-4 left-6 inline-flex items-center font-semibold text-black hover:translate-x-1 transition-transform"
-      >
-        Xem thêm <ArrowRight className="ml-2 w-4 h-4" />
+          <div className="mt-4 ">
+            <span className="inline-flex pb-2 items-center font-semibold text-black hover:translate-x-1 transition-transform">
+              Xem thêm <ArrowRight className="ml-2 w-4 h-4" />
+            </span>
+          </div>
+        </div>
       </Link>
     </div>
   );

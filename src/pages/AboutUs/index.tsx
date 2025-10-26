@@ -2,18 +2,21 @@ import React from "react";
 
 function AboutUsView() {
   return (
-    <div>
-      <div className="flex gap-15">
-        <div className="w-3/7 bg-amber-50">
+    <div className="pb-20 md:pb-40 px-4 md:px-6 lg:px-8">
+      {/* Hero Section */}
+      <div className="flex flex-col md:flex-row gap-8 md:gap-15">
+        <div className="w-full md:w-3/7 bg-amber-50">
           <img
             src="/aboutus-banner.png"
             alt="aboutus-banner"
-            className="w-[530px] h-[596px]"
+            className="w-full h-auto md:w-[530px] md:h-[596px] object-cover"
           />
         </div>
-        <div className="w-4/7">
-          <p className="text-[40px] font-bold ">CHÚNG TÔI LÀ VIỆT XANH</p>
-          <p className="text-[20px] mt-15 flex flex-col gap-6">
+        <div className="w-full md:w-4/7">
+          <p className="text-2xl md:text-[32px] lg:text-[40px] font-bold">
+            CHÚNG TÔI LÀ VIỆT XANH
+          </p>
+          <p className="text-base md:text-lg lg:text-[20px] mt-6 md:mt-15 flex flex-col gap-4 md:gap-6">
             <span>
               Chúng tôi là Việt Xanh – một trong những công ty tiên phong trong
               việc mang đến các sản phẩm phân hủy sinh học từ tinh bột ngô, góp
@@ -28,13 +31,15 @@ function AboutUsView() {
           </p>
         </div>
       </div>
-      <section className=" flex flex-col mt-[200px] md:flex-row  justify-between gap-15">
+
+      {/* History Section */}
+      <section className="flex flex-col mt-20 md:mt-32 lg:mt-[200px] md:flex-row justify-between gap-8 md:gap-15">
         {/* LEFT CONTENT */}
-        <div className="md:w-3/7">
-          <h2 className="text-[40px]  text-black font-bold mb-4">
+        <div className="w-full md:w-3/7">
+          <h2 className="text-2xl md:text-3xl lg:text-[40px] text-black font-bold mb-4">
             VIỆT XANH ĐƯỢC THÀNH LẬP TỪ NĂM 2025
           </h2>
-          <p className="text-black text-[20px] mb-6 mt-8 flex flex-col gap-8">
+          <p className="text-black text-base md:text-lg lg:text-[20px] mb-6 mt-6 md:mt-8 flex flex-col gap-6 md:gap-8">
             <span>
               Câu chuyện của Việt Xanh bắt đầu từ những chuyến đi thực tế và các
               hoạt động cộng đồng hướng tới bảo vệ môi trường. Chứng kiến lượng
@@ -45,7 +50,7 @@ function AboutUsView() {
             <span>
               Việt Xanh với những ý tưởng về các sản phẩm phân hủy sinh học từ
               tinh bột ngô, thân thiện với môi trường và an toàn cho người dùng.
-              Lấy cảm hứng từ tinh thần “sống xanh từ những điều nhỏ nhất”, Việt
+              Lấy cảm hứng từ tinh thần "sống xanh từ những điều nhỏ nhất", Việt
               Xanh mong muốn trở thành cầu nối giữa cuộc sống hiện đại và thiên
               nhiên, nơi mỗi sản phẩm không chỉ hữu ích mà còn mang trong mình ý
               nghĩa vì Trái Đất xanh.
@@ -54,24 +59,24 @@ function AboutUsView() {
         </div>
 
         {/* RIGHT IMAGES */}
-        <div className="md:w-4/7 flex flex-col items-center gap-4">
-          <div className="w-full rounded-[50px]  bg-gray-300 h-[439px]">
+        <div className="w-full md:w-4/7 flex flex-col items-center gap-4">
+          <div className="w-full rounded-3xl md:rounded-[50px] bg-gray-300 h-64 md:h-80 lg:h-[439px]">
             <img
               src="/images/main-product.jpg"
               alt="Sản phẩm chính"
-              className="object-cover rounded-[50px] w-full h-full"
+              className="object-cover rounded-3xl md:rounded-[50px] w-full h-full"
             />
           </div>
 
-          <div className="flex gap-8 mt-5 w-full">
-            <div className="flex-1 rounded-[12px] overflow-hidden  bg-gray-300 h-[196px]">
+          <div className="flex gap-4 md:gap-8 mt-3 md:mt-5 w-full">
+            <div className="flex-1 rounded-xl md:rounded-[12px] overflow-hidden bg-gray-300 h-32 md:h-40 lg:h-[196px]">
               <img
                 src="/images/sub1.jpg"
                 alt="Sản phẩm phụ 1"
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="flex-1 rounded-[12px] overflow-hidden bg-gray-300 h-[187px]">
+            <div className="flex-1 rounded-xl md:rounded-[12px] overflow-hidden bg-gray-300 h-32 md:h-40 lg:h-[187px]">
               <img
                 src="/images/sub2.jpg"
                 alt="Sản phẩm phụ 2"
@@ -81,35 +86,42 @@ function AboutUsView() {
           </div>
         </div>
       </section>
-      <div className="mt-[200px] h-[500px]">
-        <h2 className="text-[40px] text-center text-black font-bold mb-4">
+
+      {/* Vision Section */}
+      <div className="mt-20 md:mt-32 lg:mt-[200px] min-h-[400px] md:min-h-[500px] w-full">
+        <h2 className="text-2xl md:text-3xl lg:text-[40px] text-center text-black font-bold mb-8 md:mb-4">
           ĐỊNH HƯỚNG
         </h2>
-        <div className="flex justify-between mt-10 h-full">
-          <div className="w=[383px] flex flex-col items-center gap-6 self-end">
-            <p className="w-[210px] h-[210px] border border-black rounded-full flex items-center justify-center">
+        <div className="flex flex-col md:min-h-[500px] md:flex-row justify-between md:justify-around lg:justify-between mt-8 md:mt-10 gap-12 md:gap-6">
+          {/* Vision */}
+          <div className="flex flex-col items-center gap-4 md:gap-6 md:self-end">
+            <p className="w-40 h-40 md:w-48 md:h-48 lg:w-[210px] lg:h-[210px] border-2 border-black rounded-full flex items-center justify-center text-base md:text-lg font-semibold">
               TẦM NHÌN
             </p>
-            <p className="w-[383px] italic text-center">
+            <p className="max-w-xs md:max-w-[300px] lg:w-[383px] italic text-center text-sm md:text-base">
               Trở thành thương hiệu tiên phong tại Việt Nam trong lĩnh vực sản
               phẩm phân hủy sinh học, góp phần kiến tạo cuộc sống xanh và bền
               vững cho mọi người.
             </p>
           </div>
-          <div className="w=[383px] flex flex-col items-center gap-6">
-            <p className="w-[210px] h-[210px] border border-black rounded-full flex items-center justify-center">
+
+          {/* Mission */}
+          <div className="flex flex-col items-center gap-4 md:gap-6">
+            <p className="w-40 h-40 md:w-48 md:h-48 lg:w-[210px] lg:h-[210px] border-2 border-black rounded-full flex items-center justify-center text-base md:text-lg font-semibold">
               SỨ MỆNH
             </p>
-            <p className="w-[383px] italic text-center">
+            <p className="max-w-xs md:max-w-[300px] lg:w-[383px] italic text-center text-sm md:text-base">
               Mang đến các giải pháp thay thế nhựa truyền thống bằng sản phẩm an
               toàn, thân thiện môi trường.
             </p>
           </div>
-          <div className="w=[383px] flex flex-col items-center gap-6 self-end">
-            <p className="w-[210px] h-[210px] border border-black rounded-full flex items-center justify-center">
+
+          {/* Core Values */}
+          <div className="flex flex-col items-center gap-4 md:gap-6 md:self-end">
+            <p className="w-40 h-40 md:w-48 md:h-48 lg:w-[210px] lg:h-[210px] border-2 border-black rounded-full flex items-center justify-center text-base md:text-lg font-semibold text-center px-2">
               GIÁ TRỊ CỐT LÕI
             </p>
-            <p className="w-[383px] italic text-center">
+            <p className="max-w-xs md:max-w-[300px] lg:w-[383px] italic text-center text-sm md:text-base">
               Việt Xanh xây dựng hành trình phát triển dựa trên bốn giá trị cốt
               lõi: Tự nhiên – Bền vững – Trách nhiệm – Sáng tạo.
             </p>
